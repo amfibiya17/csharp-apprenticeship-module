@@ -31,4 +31,20 @@ namespace CSharp.Intro // <- a container (or scope) for classes
       Console.WriteLine($"The current time is {date.ToShortTimeString()}");
     }
   }
+
+  class LongestName
+  {
+    public string GetLongest(string[] names)
+    {
+      string longest = "";
+      foreach (string name in names)
+      {
+        if (longest.Length < name.Length)
+        {
+          longest = name;
+        }
+      }
+      return longest;
+    }
+  }
 }
