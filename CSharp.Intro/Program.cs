@@ -9,6 +9,16 @@ namespace CSharp.Intro // <- a container (or scope) for classes
     // the main method takes an array of strings as an arg - `string[]`
     {
       Console.WriteLine("Hello Makers!"); // <- the main method is called automatically when you execute the program
+      new Calculator().Calculate();
+    }
+  }
+
+  class Calculator
+  {
+    public void Calculate()
+    {
+      int result = 2 + 2; // <- we have to declare a type (int) for the variable (result)
+      Console.WriteLine("The result is {0:d}", result);
     }
   }
 }
