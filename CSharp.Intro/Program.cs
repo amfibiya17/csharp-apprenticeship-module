@@ -10,6 +10,7 @@ namespace CSharp.Intro // <- a container (or scope) for classes
     {
       Console.WriteLine("Hello Makers!"); // <- the main method is called automatically when you execute the program
       new Calculator().Calculate();
+      new Clock().DisplayTime();
     }
   }
 
@@ -18,7 +19,16 @@ namespace CSharp.Intro // <- a container (or scope) for classes
     public void Calculate()
     {
       int result = 2 + 2; // <- we have to declare a type (int) for the variable (result)
-      Console.WriteLine("The result is {0:d}", result);
+      Console.WriteLine($"The result is {result}");
+    }
+  }
+
+  class Clock
+  {
+    public void DisplayTime()
+    {
+      var date = DateTime.Now;
+      Console.WriteLine($"The current time is {date.ToShortTimeString()}");
     }
   }
 }
