@@ -6,15 +6,14 @@ namespace Game.Tests
   // [TestFixture]
   public class GameTests {
     [Test]
-    [TestCase("word1")]
-    public void Game_GetWordToGuess_ReturnsWordToGuess(string word)
+    public void Game_GetWordToGuess_ReturnsWordToGuess()
     {
       // Arrange
-      Game game = new Game();
+      Game game = new Game("MAKERS");
 
       //Act
-      string actual = game.GetWordToGuess(word);
-      string expected = word;
+      string actual = game.GetWordToGuess();
+      string expected = "M_____";
 
       // Assert
       Assert.AreEqual(expected, actual);
