@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokenCalculator", "BrokenC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokenCalculatorTests", "BrokenCalculatorTests\BrokenCalculatorTests.csproj", "{844638F7-AB98-4EA0-8625-A913838A174B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDo", "Todo\ToDo.csproj", "{F641BE7E-08FB-4DB9-948A-B8C289E557ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDo.Tests", "ToDo.Tests\ToDo.Tests.csproj", "{9675B9E0-8E29-4FD2-8E4F-A2747ECC3125}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +52,13 @@ Global
 		{844638F7-AB98-4EA0-8625-A913838A174B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{844638F7-AB98-4EA0-8625-A913838A174B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{844638F7-AB98-4EA0-8625-A913838A174B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F641BE7E-08FB-4DB9-948A-B8C289E557ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F641BE7E-08FB-4DB9-948A-B8C289E557ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F641BE7E-08FB-4DB9-948A-B8C289E557ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F641BE7E-08FB-4DB9-948A-B8C289E557ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9675B9E0-8E29-4FD2-8E4F-A2747ECC3125}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9675B9E0-8E29-4FD2-8E4F-A2747ECC3125}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9675B9E0-8E29-4FD2-8E4F-A2747ECC3125}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9675B9E0-8E29-4FD2-8E4F-A2747ECC3125}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
