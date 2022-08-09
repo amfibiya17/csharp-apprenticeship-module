@@ -1,8 +1,9 @@
 namespace Game{
   public class Game
   {
-    public string GetWordToGuess() {
-      return "B_____";
+    public string GetWordToGuess(string word) 
+    {
+      return word;
     }
   }
 }
