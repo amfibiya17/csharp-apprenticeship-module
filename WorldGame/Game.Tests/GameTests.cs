@@ -1,15 +1,22 @@
-namespace Game.Tests;
+using NUnit.Framework;
+using Game;
 
-public class Tests
+namespace Game.Tests
 {
-    [SetUp]
-    public void Setup()
-    {
-    }
-
+  // [TestFixture]
+  public class GameTests {
     [Test]
-    public void Test1()
+    public void Game_GetWordToGuess_ReturnsWordToGuess()
     {
-        Assert.Pass();
+      // Arrange
+      Game game = new Game();
+
+      //Act
+      string actual = game.GetWordToGuess();
+      string expected = "B_____";
+
+      // Assert
+      Assert.AreEqual(expected, actual);
     }
+  }
 }
