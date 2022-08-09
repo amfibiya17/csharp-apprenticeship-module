@@ -1,12 +1,13 @@
 using System;
 
-namespace Calculator
+namespace PriceDisplay
 {
-  internal class Program
+  public class PriceDisplay
   {
-    static void GetPriceLabel(int price, string name)
+    public string GetPriceLabel(int price, string name)
     {
-      Console.WriteLine($"The price for item: {name} is {price}");
+      string result = $"The price for item: {name} is {price}";
+      return result;
     }
   }
 }
