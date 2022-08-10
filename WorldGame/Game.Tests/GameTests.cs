@@ -11,9 +11,24 @@ namespace Game.Tests
       // Arrange
       Game game = new Game("MAKERS");
 
-      //Act
+      // Act
       string actual = game.GetWordToGuess();
       string expected = "M_____";
+
+      // Assert
+      Assert.AreEqual(expected, actual);
+    }
+
+    [Test]
+    public void Game_GetRemainingAttempts()
+    {
+      // Arrange
+      Game game = new Game("MAKERS");
+
+      // Act
+      game.GetWordToGuess();
+      int actual = game.GetRemainingAttempts();
+      int expected = 10;
 
       // Assert
       Assert.AreEqual(expected, actual);
