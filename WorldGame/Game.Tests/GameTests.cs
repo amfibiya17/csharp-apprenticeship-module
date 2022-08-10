@@ -83,11 +83,31 @@ namespace Game.Tests
       WordChoser mockWordChoser = Substitute.For<WordChoser>();
       mockWordChoser.GetRandomWordFromDictionary().Returns("DEVELOPER");
       Game game = new Game(mockWordChoser);
-      game.GuessLetter(letter);
 
       // Act
+      game.GuessLetter(letter);
       int actual = game.counter;
       int expected = counter;
+      
+      // Assert
+      Assert.AreEqual(expected, actual);
+    }
+
+    [Test]
+    [TestCase('D')]
+    [TestCase('E')]
+    [TestCase('R')]
+    public void Game_GuessLetter_guessedLetters(char letter)
+    {
+      // Arrange
+      WordChoser mockWordChoser = Substitute.For<WordChoser>();
+      mockWordChoser.GetRandomWordFromDictionary().Returns("DEVELOPER");
+      Game game = new Game(mockWordChoser);
+
+      // Act
+      game.GuessLetter(letter);
+      List<char> actual = game.guessedLetters;
+      List<char> expected = new List<char>() { letter };
       
       // Assert
       Assert.AreEqual(expected, actual);
