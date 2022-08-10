@@ -9,7 +9,7 @@ namespace Game.Tests
     public void Game_GetWordToGuess_ReturnsWordToGuess()
     {
       // Arrange
-      Game game = new Game("MAKERS");
+      Game game = new Game();
 
       // Act
       string actual = game.GetWordToGuess();
@@ -23,7 +23,7 @@ namespace Game.Tests
     public void Game_GetRemainingAttempts()
     {
       // Arrange
-      Game game = new Game("MAKERS");
+      Game game = new Game();
 
       // Act
       game.GetWordToGuess();
@@ -32,6 +32,20 @@ namespace Game.Tests
 
       // Assert
       Assert.AreEqual(expected, actual);
+    }
+
+    [Test]
+    public void Game_GetRandomWordFromDictionary()
+    {
+      // Arrange
+      Game game = new Game();
+
+      // Act
+      string actual = game.GetRandomWordFromDictionary();
+      string expected = "Test";
+
+      // Assert
+      Assert.AreEqual(actual, expected);
     }
   }
 }
