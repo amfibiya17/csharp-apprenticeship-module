@@ -112,5 +112,25 @@ namespace Game.Tests
       // Assert
       Assert.AreEqual(expected, actual);
     }
+
+    [Test]
+    [TestCase('A')]
+    [TestCase('Z')]
+    [TestCase('Y')]
+    public void Game_GuessLetter_guessedLetters_None_In_theList(char letter)
+    {
+      // Arrange
+      WordChoser mockWordChoser = Substitute.For<WordChoser>();
+      mockWordChoser.GetRandomWordFromDictionary().Returns("DEVELOPER");
+      Game game = new Game(mockWordChoser);
+
+      // Act
+      game.GuessLetter(letter);
+      List<char> actual = game.guessedLetters;
+      List<char> expected = new List<char>() { };
+      
+      // Assert
+      Assert.AreEqual(expected, actual);
+    }
   }
 }
