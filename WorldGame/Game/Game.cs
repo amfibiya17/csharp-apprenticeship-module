@@ -46,8 +46,10 @@ namespace Game{
       if (wordToGuess.IndexOf(letter) == -1) {
         counter -= 1;
         return false;
+      } else {
+        guessedLetters.Add(letter);
+        return true;
       }
-      return true;
     }
   }
 }

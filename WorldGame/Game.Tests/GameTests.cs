@@ -53,5 +53,21 @@ namespace Game.Tests
       // Assert
       Assert.AreEqual(expected, actual);
     }
+
+    [Test]
+    public void Game_GuessLetter_True()
+    {
+      // Arrange
+      WordChoser mockWordChoser = Substitute.For<WordChoser>();
+      mockWordChoser.GetRandomWordFromDictionary().Returns("DEVELOPER");
+      Game game = new Game(mockWordChoser);
+
+      // Act
+      bool actual = game.GuessLetter('D');
+      bool expected = true;
+      
+      // Assert
+      Assert.AreEqual(expected, actual);
+    }
   }
 }
