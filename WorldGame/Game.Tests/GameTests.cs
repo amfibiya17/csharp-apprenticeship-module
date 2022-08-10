@@ -69,5 +69,28 @@ namespace Game.Tests
       // Assert
       Assert.AreEqual(expected, actual);
     }
+
+    [Test]
+    [TestCase('T', 9)]
+    [TestCase('Y', 9)]
+    [TestCase('Z', 9)]
+    [TestCase('D', 10)]
+    [TestCase('E', 10)]
+    [TestCase('R', 10)]
+    public void Game_GuessLetter_Counter(char letter, int counter)
+    {
+      // Arrange
+      WordChoser mockWordChoser = Substitute.For<WordChoser>();
+      mockWordChoser.GetRandomWordFromDictionary().Returns("DEVELOPER");
+      Game game = new Game(mockWordChoser);
+      game.GuessLetter(letter);
+
+      // Act
+      int actual = game.counter;
+      int expected = counter;
+      
+      // Assert
+      Assert.AreEqual(expected, actual);
+    }
   }
 }

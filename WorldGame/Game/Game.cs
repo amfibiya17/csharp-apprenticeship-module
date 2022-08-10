@@ -4,8 +4,8 @@ using System.Text;
 namespace Game{
   public class Game
   {
-    int counter;
-    string wordToGuess;
+    public int counter;
+    public string wordToGuess;
     public List<char> guessedLetters;
     public Game(WordChoser wordChoser) // <- it means that you need to give a WordChoser(type) when you create a game and we will call it wordChoser
     {
