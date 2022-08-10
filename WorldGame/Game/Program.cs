@@ -9,7 +9,7 @@ namespace MyApp
       Game.Game game = new Game.Game();
       game.GetWordToGuess();
       game.GetRemainingAttempts();
-      game.GetRandomWordFromDictionary();
+      // game.GetRandomWordFromDictionary();
       Console.Write("Checking if it's working!");
     }
   }

@@ -33,19 +33,5 @@ namespace Game.Tests
       // Assert
       Assert.AreEqual(expected, actual);
     }
-
-    [Test]
-    public void Game_GetRandomWordFromDictionary()
-    {
-      // Arrange
-      Game game = new Game();
-
-      // Act
-      string actual = game.GetRandomWordFromDictionary();
-      string expected = "Test";
-
-      // Assert
-      Assert.AreEqual(actual, expected);
-    }
   }
 }
