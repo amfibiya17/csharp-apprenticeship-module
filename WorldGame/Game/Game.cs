@@ -5,11 +5,11 @@ namespace Game{
   public class Game
   {
     int counter;
-    // string[] DICTIONARY;
-    public Game() 
+    string wordToGuess;
+    public Game(WordChoser wordChoser) // <- it means that you need to give a WordChoser(type) when you create a game and we will call it wordChoser
     {
       counter = 10;
-      // DICTIONARY = new string[] {"MAKERS", "CANDIES", "DEVELOPER", "LONDON"};
+      wordToGuess = wordChoser.GetRandomWordFromDictionary(); //<- assign the result of the method on the injected dependency
     }
 
     // public int GetCounter
@@ -22,7 +22,6 @@ namespace Game{
 
     public string GetWordToGuess() 
     {
-      string wordToGuess = "GetRandomWordFromDictionary()";
       StringBuilder clue = new StringBuilder();
       for (int i = 0; i < wordToGuess.Length; i++)
       {
@@ -40,10 +39,5 @@ namespace Game{
     {
       return counter;
     }
-
-    // public string GetRandomWordFromDictionary() {
-    //   Random rand = new Random();
-    //   return DICTIONARY[rand.Next(DICTIONARY.Length)];
-    // }
   }
 }

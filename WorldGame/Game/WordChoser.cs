@@ -8,7 +8,7 @@ namespace Game {
       DICTIONARY = new string[] {"MAKERS", "CANDIES", "DEVELOPER", "LONDON"};
     }
 
-    public string GetRandomWordFromDictionary() {
+    public virtual string GetRandomWordFromDictionary() {
       Random rand = new Random();
       return DICTIONARY[rand.Next(DICTIONARY.Length)];
     }

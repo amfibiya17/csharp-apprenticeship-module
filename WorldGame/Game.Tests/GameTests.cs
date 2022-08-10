@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using Game;
+using NSubstitute;
 
 namespace Game.Tests
 {
@@ -9,11 +10,13 @@ namespace Game.Tests
     public void Game_GetWordToGuess_ReturnsWordToGuess()
     {
       // Arrange
-      Game game = new Game();
+      WordChoser mockWordChoser = Substitute.For<WordChoser>();
+      mockWordChoser.GetRandomWordFromDictionary().Returns("DEVELOPER");
+      Game game = new Game(mockWordChoser);
 
       // Act
       string actual = game.GetWordToGuess();
-      string expected = "M_____";
+      string expected = "D________";
 
       // Assert
       Assert.AreEqual(expected, actual);
@@ -23,7 +26,8 @@ namespace Game.Tests
     public void Game_GetRemainingAttempts()
     {
       // Arrange
-      Game game = new Game();
+      WordChoser wordChoser = new WordChoser();
+      Game game = new Game(wordChoser);
 
       // Act
       game.GetWordToGuess();

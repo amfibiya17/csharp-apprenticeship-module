@@ -6,10 +6,11 @@ namespace MyApp
   {
     static void Main(string[] args)
     {
-      Game.Game game = new Game.Game();
+      Game.WordChoser wordChoser = new Game.WordChoser();
+      Game.Game game = new Game.Game(wordChoser);
       game.GetWordToGuess();
       game.GetRemainingAttempts();
-      // game.GetRandomWordFromDictionary();
+      wordChoser.GetRandomWordFromDictionary();
       Console.Write("Checking if it's working!");
     }
   }

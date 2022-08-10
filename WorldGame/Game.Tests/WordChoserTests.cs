@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using Game;
+using NSubstitute;
 
 namespace Game.Tests
 {
@@ -7,15 +8,12 @@ namespace Game.Tests
     [Test]
     public void WordChoser_GetRandomWordFromDictionary()
     {
-      // Arrange
       WordChoser wordChoser = new WordChoser();
+      string[] DICTIONARY = new string[] {"MAKERS", "CANDIES", "DEVELOPER", "LONDON"};
 
-      // Act
-      string actual = wordChoser.GetRandomWordFromDictionary();
-      string expected = "Test";
+      string result = wordChoser.GetRandomWordFromDictionary();
 
-      // Assert
-      Assert.AreEqual(actual, expected);
+      Assert.IsTrue(DICTIONARY.Contains(result));
     }
   }
 }
