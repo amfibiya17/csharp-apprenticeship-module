@@ -6,10 +6,12 @@ namespace Game{
   {
     int counter;
     string wordToGuess;
+    public List<char> guessedLetters;
     public Game(WordChoser wordChoser) // <- it means that you need to give a WordChoser(type) when you create a game and we will call it wordChoser
     {
       counter = 10;
       wordToGuess = wordChoser.GetRandomWordFromDictionary(); //<- assign the result of the method on the injected dependency
+      guessedLetters = new List<char>();
     }
 
     // public int GetCounter
@@ -38,6 +40,14 @@ namespace Game{
     public int GetRemainingAttempts()
     {
       return counter;
+    }
+
+    public bool GuessLetter(char letter) {
+      if (wordToGuess.IndexOf(letter) == -1) {
+        counter -= 1;
+        return false;
+      }
+      return true;
     }
   }
 }
