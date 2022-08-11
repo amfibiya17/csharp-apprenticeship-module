@@ -1,3 +1,6 @@
+using MyList;
+using NUnit.Framework;
+
 namespace MyList.Tests;
 
 public class ShoppingItemTests

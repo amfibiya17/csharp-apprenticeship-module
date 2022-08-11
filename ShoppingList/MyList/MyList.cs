@@ -5,18 +5,19 @@ namespace MyList
 {
   public class MyList
   {
-    public List<string> list;
+    // ShoppingItem shoppingItem;
+    public List<ShoppingItem> list;
     public MyList() // <- constructor of the class
     {
-      list = new List<string>();
+      list = new List<ShoppingItem>();
     }
 
-    public void AddItem(string item)
+    public void AddItem(ShoppingItem shoppingItem)
     {
-      list.Add(item);
+      list.Add(shoppingItem);
     }
 
-    public List<string> GetItems()
+    public List<ShoppingItem> GetItems()
     {
       return list;
     }
