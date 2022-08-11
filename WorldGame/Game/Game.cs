@@ -27,7 +27,7 @@ namespace Game{
       StringBuilder clue = new StringBuilder();
       for (int i = 0; i < wordToGuess.Length; i++)
       {
-        if (i == 0)
+        if (i == 0 || guessedLetters.Contains(wordToGuess[i]))
         {
           clue.Append(wordToGuess[i]);
         } else {
@@ -53,7 +53,7 @@ namespace Game{
     }
     public bool IsGameWon()
     {
-      if (counter >= 1)
+      if (guessedLetters.Count() == wordToGuess.Length - 1)
       {
         return true;
       } else{

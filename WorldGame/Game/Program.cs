@@ -24,6 +24,17 @@ namespace MyApp
         } else {
           System.Console.WriteLine("\nYour guess is wrong...");
         }
+        
+        if (game.IsGameLost()) {
+          System.Console.WriteLine("Sorry! You lost :(");
+          return;
+        }
+
+        if (game.IsGameWon()) {
+          System.Console.WriteLine("Yappyyyy! You won!");
+          return;
+        }
+
       } while (game.counter >= 1);
     }
   }
