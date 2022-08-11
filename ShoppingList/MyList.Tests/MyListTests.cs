@@ -1,15 +1,16 @@
 namespace MyList.Tests;
 
-public class Tests
+public class MyListTests
 {
-    [SetUp]
-    public void Setup()
+    [Test]
+    public void Initializes_Empty_List_Of_Item_Names()
     {
+      // Arrange
+      MyList myList = new MyList();
+
+      // Assert
+      Assert.AreEqual(myList.list, new List<string>());
     }
 
-    [Test]
-    public void Test1()
-    {
-        Assert.Pass();
-    }
+    
 }
