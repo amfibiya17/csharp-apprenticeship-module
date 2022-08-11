@@ -1,4 +1,4 @@
-namespace List.Tests;
+namespace MyList.Tests;
 
 public class Tests
 {
