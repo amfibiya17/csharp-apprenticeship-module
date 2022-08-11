@@ -12,5 +12,22 @@ public class MyListTests
       Assert.AreEqual(myList.list, new List<string>());
     }
 
+    [Test]
+    [TestCase("Item1")]
+    [TestCase("Item2")]
+    public void It_Has_AddItem_Method_WhichAdds_a_String_To_aListOfItems(string item)
+    {
+      // Arrange
+      MyList myList = new MyList();
+
+      // Act
+      myList.AddItem(item);
+      List<string> actual = myList.list;
+      List<string> expected = new List<string>() { item };
+
+      // Assert
+      Assert.AreEqual(actual, expected);
+    }
+
     
 }

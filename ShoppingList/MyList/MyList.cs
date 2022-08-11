@@ -10,5 +10,10 @@ namespace MyList
     {
       list = new List<string>();
     }
+
+    public void AddItem(string item)
+    {
+      list.Add(item);
+    } 
   }
 }
