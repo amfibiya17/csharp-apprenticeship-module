@@ -14,6 +14,11 @@ namespace MyList
     public void AddItem(string item)
     {
       list.Add(item);
-    } 
+    }
+
+    public List<string> GetItems()
+    {
+      return list;
+    }
   }
 }
