@@ -189,5 +189,24 @@ namespace Game.Tests
       // Assert
       Assert.AreEqual(expected, actual);
     }
+
+    [Test]
+    public void Game_IsGameWon_Checking_When_MoreThanOneOccurrence()
+    {
+      // Arrange
+      WordChoser mockWordChoser = Substitute.For<WordChoser>();
+      mockWordChoser.GetRandomWordFromDictionary().Returns("LONDON");
+      Game game = new Game(mockWordChoser);
+
+      // Act
+      game.GuessLetter('O');
+      game.GuessLetter('N');
+      game.GuessLetter('D');
+      bool actual = game.IsGameWon();
+      bool expected = true;
+      
+      // Assert
+      Assert.AreEqual(expected, actual);
+    }
   }
 }
