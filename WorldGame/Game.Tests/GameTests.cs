@@ -155,7 +155,6 @@ namespace Game.Tests
     [TestCase('I', 3)]
     [TestCase('I', 2)]
     [TestCase('I', 1)]
-    // [TestCase('I', 0)]
     public void Game_IsGameLost_CheckingCounter(char letter, int counter)
     {
       // Act
@@ -168,16 +167,7 @@ namespace Game.Tests
     }
 
     [Test]
-    [TestCase('D', 10)]
-    [TestCase('E', 10)]
-    [TestCase('V', 10)]
-    [TestCase('E', 10)]
-    [TestCase('L', 10)]
-    [TestCase('O', 10)]
-    [TestCase('P', 10)]
-    [TestCase('E', 10)]
-    [TestCase('R', 10)]
-    public void Game_IsGameWon_CheckingCounter(char letter, int counter)
+    public void Game_IsGameWon_CheckingCounter()
     {
       // Arrange
       WordChoser mockWordChoser = Substitute.For<WordChoser>();
@@ -185,8 +175,15 @@ namespace Game.Tests
       Game game = new Game(mockWordChoser);
 
       // Act
-      game.GuessLetter(letter);
-      bool actual = gameLost.IsGameWon();
+      game.GuessLetter('E');
+      game.GuessLetter('V');
+      game.GuessLetter('E');
+      game.GuessLetter('L');
+      game.GuessLetter('O');
+      game.GuessLetter('P');
+      game.GuessLetter('E');
+      game.GuessLetter('R');
+      bool actual = game.IsGameWon();
       bool expected = true;
       
       // Assert
