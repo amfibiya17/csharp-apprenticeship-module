@@ -167,28 +167,30 @@ namespace Game.Tests
       Assert.AreEqual(expected, actual);
     }
 
-    // [Test]
-    // [TestCase('D', 10)]
-    // [TestCase('E', 10)]
-    // [TestCase('V', 10)]
-    // [TestCase('E', 10)]
-    // [TestCase('P', 10)]
-    // [TestCase('O', 10)]
-    // [TestCase('R', 10)]
-    // public void Game_IsGameWon_CheckingCounter(char letter, int counter)
-    // {
-    //   // Arrange
-    //   WordChoser mockWordChoser = Substitute.For<WordChoser>();
-    //   mockWordChoser.GetRandomWordFromDictionary().Returns("DEVELOPER");
-    //   Game game = new Game(mockWordChoser);
+    [Test]
+    [TestCase('D', 10)]
+    [TestCase('E', 10)]
+    [TestCase('V', 10)]
+    [TestCase('E', 10)]
+    [TestCase('L', 10)]
+    [TestCase('O', 10)]
+    [TestCase('P', 10)]
+    [TestCase('E', 10)]
+    [TestCase('R', 10)]
+    public void Game_IsGameWon_CheckingCounter(char letter, int counter)
+    {
+      // Arrange
+      WordChoser mockWordChoser = Substitute.For<WordChoser>();
+      mockWordChoser.GetRandomWordFromDictionary().Returns("DEVELOPER");
+      Game game = new Game(mockWordChoser);
 
-    //   // Act
-    //   game.GuessLetter(letter);
-    //   int actual = game.counter;
-    //   int expected = counter;
+      // Act
+      game.GuessLetter(letter);
+      bool actual = gameLost.IsGameWon();
+      bool expected = true;
       
-    //   // Assert
-    //   Assert.AreEqual(expected, actual);
-    // }
+      // Assert
+      Assert.AreEqual(expected, actual);
+    }
   }
 }

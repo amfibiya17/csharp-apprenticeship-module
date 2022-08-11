@@ -51,11 +51,15 @@ namespace Game{
         return true;
       }
     }
-
-    // public bool IsGameWon()
-    // {
-
-    // }
+    public bool IsGameWon()
+    {
+      if (counter >= 1)
+      {
+        return true;
+      } else{
+        return false;
+      }
+    }
 
     public bool IsGameLost()
     {
