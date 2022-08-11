@@ -18,7 +18,7 @@ namespace MyApp
         
         char letter = System.Console.ReadKey().KeyChar;
 
-        if (game.GuessLetter(letter) == true) {
+        if (game.GuessLetter(Char.ToUpper(letter))) {
           System.Console.WriteLine("\nYour guess is right!");
           
         } else {

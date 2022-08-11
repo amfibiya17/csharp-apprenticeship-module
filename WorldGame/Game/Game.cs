@@ -14,14 +14,6 @@ namespace Game{
       guessedLetters = new List<char>();
     }
 
-    // public int GetCounter
-    // {
-    //   get
-    //   {
-    //     return counter;
-    //   }
-    // }
-
     public string GetWordToGuess() 
     {
       StringBuilder clue = new StringBuilder();
@@ -43,7 +35,7 @@ namespace Game{
     }
 
     public bool GuessLetter(char letter) {
-      if (wordToGuess.IndexOf(letter) == -1) {
+      if (wordToGuess.IndexOf(letter) == - 1) {
         counter -= 1;
         return false;
       } else {
@@ -53,12 +45,14 @@ namespace Game{
     }
     public bool IsGameWon()
     {
-      if (guessedLetters.Count() == wordToGuess.Length - 1)
+      for (int i = 1; i < wordToGuess.Length; i ++)
       {
-        return true;
-      } else{
-        return false;
+        if (!guessedLetters.Contains(wordToGuess[i])) 
+        {
+          return false;
+        }
       }
+      return true;
     }
 
     public bool IsGameLost()
