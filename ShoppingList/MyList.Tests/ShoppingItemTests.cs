@@ -16,4 +16,19 @@ public class ShoppingItemTests
     // Assert
     Assert.AreEqual(actual, expected);
   }
+
+  [Test]
+  [TestCase("Item1", 4.99)]
+  public void This_Class_Holds_Two_Properties_Checking_Price(string itemName, double itemPrice) 
+  {
+    // Arrange
+    ShoppingItem item = new ShoppingItem(itemName, itemPrice);
+
+    // Act
+    double actual = item.price;
+    double expected = itemPrice;
+
+    // Assert
+    Assert.AreEqual(actual, expected);
+  }
 }
