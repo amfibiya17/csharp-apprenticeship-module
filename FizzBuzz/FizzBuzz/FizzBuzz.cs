@@ -18,7 +18,10 @@ namespace FizzBuzz
       {
         return "Buzz";
       }
-      return number.ToString();
+      else
+      {
+        return number.ToString();
+      }
     }
   }
 }
