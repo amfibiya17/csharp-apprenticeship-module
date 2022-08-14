@@ -56,4 +56,22 @@ public class FizzBuzzTests
     // Assert
     Assert.AreEqual(actual, expected);
   }
+
+  [Test]
+  [TestCase(15, "FizzBuzz")]
+  [TestCase(30, "FizzBuzz")]
+  [TestCase(45, "FizzBuzz")]
+  [TestCase(60, "FizzBuzz")]
+  public void For_NumbersDivisibleByThreeAndFive_ReturnFizzBuzz(int input, string output)
+  {
+    // Arrange
+    FizzBuzz fizzBuzz = new FizzBuzz();
+
+    // Act
+    string actual = fizzBuzz.For(input);
+    string expected = output;
+
+    // Assert
+    Assert.AreEqual(actual, expected);
+  }
 }
