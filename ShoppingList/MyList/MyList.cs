@@ -5,7 +5,6 @@ namespace MyList
 {
   public class MyList
   {
-    // ShoppingItem shoppingItem;
     public List<ShoppingItem> list;
     public MyList() // <- constructor of the class
     {
