@@ -4,9 +4,13 @@ namespace FizzBuzz
 {
   public class FizzBuzz
   {
-    public int For(int number)
+    public string For(int number)
     {
-      return number;
+      if (number % 3 == 0)
+      {
+        return "Fizz";
+      }
+      return number.ToString();
     }
   }
 }
