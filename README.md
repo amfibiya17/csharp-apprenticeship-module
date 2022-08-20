@@ -1,12 +1,11 @@
 C# Fundamentals week 1 Makers Accelerator
 ===
 
-1. [CSharp.Intro](/CSharp.Intro/README.md)
-2. [Calculator](/Calculator/README.md)
-3. [FizzBuzz](/FizzBuzz/README.md)
-4. [ShoppingList](/ShoppingList/README.md)
-5. [Exercises](/main/exercises/csharp_tdd_intro/README.md)
-6. [WordGame](/WorldGame/README.md)
+1. CSharp.Intro
+2. FizzBuzz
+3. ShoppingList
+4. Exercises (ToDo List, Calculator, Broken Calculator, PriceDisplay)
+5. [WordGame](https://github.com/amfibiya17/csharp-apprenticeship-module/tree/main/WorldGame)
 
 
 ---
